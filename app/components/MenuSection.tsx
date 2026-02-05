@@ -30,14 +30,50 @@ export default function MenuSection({
 
               <ul className="space-y-4">
                 {section.items.map((item) => (
-                  <li key={item.name}>
-                    <p className="font-semibold">{item.name}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {item.description}
-                    </p>
+                  <li key={item.id ?? item.name}>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold flex items-center">
+                          {item.name}
+
+                          {item.badges?.includes("spicy") && (
+                            <img
+                              src="/icons/chile.ico"
+                              alt="Spicy"
+                              title="Spicy – picante al gusto"
+                              className="inline-block ml-2 w-4 h-4 hover:scale-110 transition"
+                            />
+                          )}
+                          {item.badges?.includes("popular") && (
+                            <img
+                              src="/favicon.ico"
+                              alt="Popular"
+                              title="Popular"
+                              className="inline-block ml-2 w-4 h-4 hover:scale-110 transition"
+                            />
+                          )}
+                        </p>
+
+                        {item.description && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+
+                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                        {item.prices.map((p, i) => (
+                          <div key={i}>
+                            {p.size && <span>{p.size} </span>}
+                            ${p.price.toFixed(2)}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
+
             </div>
           ))}
         </div>
