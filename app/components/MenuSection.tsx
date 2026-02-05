@@ -1,9 +1,11 @@
+import type { MenuSection as MenuSectionType } from "@/app/types/menu";
 import { menu } from "@/app/data/menu";
 
 type MenuSectionProps = {
   title?: string;
   showButton?: boolean;
 };
+const typedMenu: MenuSectionType[] = menu;
 
 export default function MenuSection({
   title = "Our Menu",
@@ -22,7 +24,7 @@ export default function MenuSection({
         </div>
 
         <div className="mt-14 grid gap-12 md:grid-cols-3">
-          {menu.map((section) => (
+          {typedMenu.map((section) => (
             <div key={section.category}>
               <h3 className="text-2xl font-bold border-b pb-2 mb-4">
                 {section.category}
@@ -62,7 +64,7 @@ export default function MenuSection({
                       </div>
 
                       <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                        {item.prices.map((p, i) => (
+                        {item.prices?.map((p, i) => (
                           <div key={i}>
                             {p.size && <span>{p.size} </span>}
                             ${p.price.toFixed(2)}
