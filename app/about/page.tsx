@@ -20,10 +20,64 @@ export const metadata: Metadata = {
     "Mexican Resturant in Summit"
   ],
 };
+
 export default function AboutPage() {
   return (
-    <main>
-      <AboutSection />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Taqueria Hacienda Sabor",
+            "description":
+              "Taqueria Hacienda Sabor offers authentic Mexican cuisine and fresh seafood in Summit, IL.",
+            "image": "/path/to/your-restaurant-photo.jpg", // optional but recommended
+            "telephone": "(708) 929-4378",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "6237 S Archer Rd",
+              "addressLocality": "Summit",
+              "addressRegion": "IL",
+              "postalCode": "60501",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 41.7875,
+              "longitude": -87.8104
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "11:00",
+                "closes": "22:00"
+              }
+            ],
+            "servesCuisine": [
+              "Mexican",
+              "Seafood",
+              "Grill"
+            ],
+            "priceRange": "$$",
+            "url": "https://yourwebsite.com",
+            "hasMap": "https://www.google.com/maps/place/6237+S+Archer+Rd,+Summit,+IL+60501"
+          }),
+        }}
+      />
+      <main>
+        <AboutSection />
+      </main>
+    </>
   );
 }

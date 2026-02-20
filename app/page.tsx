@@ -1,18 +1,28 @@
 import Link from "next/link";
 import MenuSection from "@/app/components/MenuSection";
 import Header from "@/app/components/Header";
-
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-amber-50 text-gray-900 flex flex-col">
     <main>
       {/* HERO */}
-<section className="bg-background text-foreground">
-  <div className="max-w-7xl mx-auto px-6 py-20 text-center">
+  <section className="relative h-[60vh] sm:h-[60vh] lg:h-[70vh] flex items-center justify-center text-white overflow-hidden">
+    <Image
+    src="/images/mariscos.png"
+    alt="Hacienda Tequilera authentic Mexican food and seafood in Summit Illinois"
+    fill
+    priority
+    className="object-cover"
+  />
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-      Mexican Bar & Grill<br />
-      Texas-Sized Flavor
+      Hacienda Tequilera<br />
+      El Sabor De Mexico
     </h1>
 
     <p className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
