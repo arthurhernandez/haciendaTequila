@@ -31,12 +31,12 @@ export default function Header() {
         <h1 className="text-2xl font-bold">Hacienda Tequilera</h1>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex gap-6 text-base">
+        <nav className="hidden md:flex gap-6 text-base bg-amber-50">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.path}
-              className={`relative px-2 py-1 font-medium transition ${
+              className={`relative px-2 py-1 font-medium bg-amber-50 transition ${
                 pathname === item.path
                   ? "text-red-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-red-700"
                   : "text-gray-700 hover:text-red-700"
@@ -72,7 +72,7 @@ export default function Header() {
 
       {/* MOBILE DROPDOWN - Next Level Animation */}
       <div
-        className={`md:hidden fixed top-full left-0 w-full bg-white shadow-lg overflow-hidden transform-gpu transition-all duration-500 ease-out ${
+        className={`md:hidden fixed top-full left-0 w-full bg-amber-50 shadow-lg overflow-hidden transform-gpu transition-all duration-500 ease-out ${
           open
             ? "max-h-[500px] opacity-100 scale-y-100"
             : "max-h-0 opacity-0 scale-y-95"

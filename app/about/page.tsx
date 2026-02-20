@@ -75,7 +75,7 @@ export default function AboutPage() {
           }),
         }}
       />
-      <main>
+      <main className="bg-amber-50">
         <AboutSection />
       </main>
     </>

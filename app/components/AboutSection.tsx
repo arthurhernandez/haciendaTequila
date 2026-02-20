@@ -1,6 +1,7 @@
+import HoursSection from "@/app/components/HoursSection";
 export default function AboutSection() {
   return (
-    <section  className="pt-20 bg-amber/70 dark:bg-amber/70-950 py-20 ">
+    <section  className="pt-20 bg-amber/70 dark:bg-amber/50 py-20 ">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* TEXT */}
@@ -8,7 +9,25 @@ export default function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">
             About Taqueria Hacienda y Sabor
           </h2>
-
+        {/* MAP */}
+        <div className="w-full h-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d380844.6582841704!2d-88.3737097!3d41.777694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e370052554531%3A0xb48d6ce4b05d94f!2sHacienda%20Tequilera%20Y%20Sabor!5e0!3m2!1sen!2sus!4v1770330021229!5m2!1sen!2sus"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-xl shadow"
+          />
+          
+        </div>
+        <HoursSection />
+        
+                  {/* Local SEO signal */}
+          <p className="mt-6 text-sm text-gray-500">
+            📍 Located at <strong>6237 S Archer Rd, Summit, IL 60501</strong>
+          </p>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
             Taqueria Hacienda Sabor is a family-owned Mexican restaurant serving
             authentic Mexican cuisine, fresh seafood, and fire-grilled
@@ -27,23 +46,7 @@ export default function AboutSection() {
             hospitality that make Taqueria Hacienda Sabor a local favorite.
           </p>
 
-          {/* Local SEO signal */}
-          <p className="mt-6 text-sm text-gray-500">
-            📍 Located at <strong>6237 S Archer Rd, Summit, IL 60501</strong>
-          </p>
-        </div>
 
-        {/* MAP */}
-        <div className="w-full h-full">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d380844.6582841704!2d-88.3737097!3d41.777694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e370052554531%3A0xb48d6ce4b05d94f!2sHacienda%20Tequilera%20Y%20Sabor!5e0!3m2!1sen!2sus!4v1770330021229!5m2!1sen!2sus"
-            width="100%"
-            height="350"
-            style={{ border: 0 }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-xl shadow"
-          />
         </div>
 
       </div>
