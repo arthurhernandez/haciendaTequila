@@ -22,25 +22,25 @@ export default function AboutSection() {
           />
           
         </div>
-        <HoursSection />
+      <HoursSection />
         
                   {/* Local SEO signal */}
           <p className="mt-6 text-sm text-gray-500">
             📍 Located at <strong>6237 S Archer Rd, Summit, IL 60501</strong>
           </p>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
+          <p className="text-gray-700 dark:text-gray-700 mb-4">
             Taqueria Hacienda Sabor is a family-owned Mexican restaurant serving
             authentic Mexican cuisine, fresh seafood, and fire-grilled
             specialties in <strong>[Summit, IL]</strong>.
           </p>
 
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
+          <p className="text-gray-700 dark:text-gray-700 mb-4">
             From our tequila-marinated arrachera and sizzling fajitas to our
             handcrafted ceviches and house specialties, every dish is prepared
             with bold flavors and fresh ingredients.
           </p>
 
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-gray-700">
             Whether you're joining us for a casual lunch, family dinner, or a
             night out with friends, we invite you to experience the flavors and
             hospitality that make Taqueria Hacienda Sabor a local favorite.
