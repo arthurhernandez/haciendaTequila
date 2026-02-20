@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-white dark:bg-neutral-950 py-20">
+    <section  className="pt-20 bg-amber/70 dark:bg-amber/70-950 py-20 ">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* TEXT */}
