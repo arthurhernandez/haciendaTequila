@@ -44,23 +44,22 @@ export default function InstagramEmbed({ postUrls }: InstagramEmbedProps) {
   }, [visiblePosts]);
 
   return (
-    <section className="py-16 bg-white/70 backdrop-blur-md">
+    <section className="py-2">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-center mb-10">
-          Follow Us on Instagram
-        </h2>
-
-        <div className="flex justify-center gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           {postUrls.slice(0, visiblePosts).map((url, index) => (
-            <blockquote
-              key={index}
-              className="instagram-media"
-              data-instgrm-permalink={url}
-              data-instgrm-version="14"
-              style={{
-                width: "350px",
-              }}
-            />
+            <div key={index} className="shadow-2xl rounded-xl overflow-hidden border border-brand-gold/20">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-permalink={url}
+                data-instgrm-version="14"
+                style={{
+                  width: "100%",
+                  minWidth: "326px",
+                  margin: 0,
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>

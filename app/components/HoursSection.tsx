@@ -32,24 +32,20 @@ export default function HoursSection() {
   }, []);
 
   return (
-    <section className="py-8 sm:py-16 bg-amber-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+    <section className="py-8">
+      <div className="text-left">
 
         {/* Title */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4">
-          <FaClock className="text-yellow-600 text-2xl sm:text-3xl" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-            Our Hours
-          </h2>
-        </div>
-
-        {/* Open Now Indicator */}
-        <div className="mb-6 sm:mb-10">
+        <div className="flex items-center gap-3 mb-6">
+          <FaClock className="text-brand-gold text-2xl" />
+          <h3 className="text-2xl font-serif font-bold text-brand-green dark:text-brand-gold">
+            Hours of Operation
+          </h3>
           <span
-            className={`px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition ${
+            className={`ml-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition ${
               isOpen
                 ? "bg-green-100 text-green-700"
-                : "bg-red-100 text-red-700"
+                : "bg-brand-red/10 text-brand-red"
             }`}
           >
             {isOpen ? "Open Now" : "Closed"}
@@ -57,26 +53,26 @@ export default function HoursSection() {
         </div>
 
         {/* Hours Card */}
-        <div className="bg-white shadow-2xl rounded-3xl p-4 sm:p-8 grid gap-3 sm:gap-5 text-sm sm:text-lg transition transform hover:scale-[1.02] hover:shadow-amber-200 w-full">
+        <div className="grid gap-4 text-base font-sans">
 
-          <div className="flex flex-col sm:flex-row justify-between border-b pb-2 sm:pb-3">
-            <span className="font-semibold">Monday - Thursday</span>
-            <span>11:00 AM – 9:00 PM</span>
+          <div className="flex justify-between border-b border-brand-gold/10 pb-2">
+            <span className="font-bold text-charcoal/70 dark:text-parchment/70">Mon - Thu</span>
+            <span className="text-brand-red font-semibold">11:00 AM – 9:00 PM</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between border-b pb-2 sm:pb-3">
-            <span className="font-semibold">Friday</span>
-            <span>11:00 AM – 2:00 AM</span>
+          <div className="flex justify-between border-b border-brand-gold/10 pb-2">
+            <span className="font-bold text-charcoal/70 dark:text-parchment/70">Friday</span>
+            <span className="text-brand-red font-semibold">11:00 AM – 2:00 AM</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between border-b pb-2 sm:pb-3">
-            <span className="font-semibold">Saturday</span>
-            <span>11:00 AM – 2:00 AM</span>
+          <div className="flex justify-between border-b border-brand-gold/10 pb-2">
+            <span className="font-bold text-charcoal/70 dark:text-parchment/70">Saturday</span>
+            <span className="text-brand-red font-semibold">11:00 AM – 2:00 AM</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between">
-            <span className="font-semibold">Sunday</span>
-            <span>11:00 AM – 10:00 PM</span>
+          <div className="flex justify-between">
+            <span className="font-bold text-charcoal/70 dark:text-parchment/70">Sunday</span>
+            <span className="text-brand-red font-semibold">11:00 AM – 10:00 PM</span>
           </div>
 
         </div>

@@ -1,5 +1,6 @@
 import type { MenuSection as MenuSectionType } from "@/app/types/menu";
 import { menu } from "@/app/data/menu";
+import Link from "next/link";
 
 type MenuSectionProps = {
   title?: string;
@@ -12,61 +13,56 @@ export default function MenuSection({
   showButton = true,
 }: MenuSectionProps) {
   return (
-    <section className="bg-orange-50 dark:bg-neutral-90 py-20">
+    <section className="bg-parchment dark:bg-charcoal py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-brand-green dark:text-brand-gold">
             {title}
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-brand-red mx-auto mt-4 mb-6"></div>
+          <p className="text-lg text-gray-700 dark:text-parchment/70 max-w-2xl mx-auto font-sans italic">
             Fire-grilled classics, fresh seafood, and handcrafted drinks.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-12 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {typedMenu.map((section) => (
-            <div key={section.category}>
-              <h3 className="text-2xl font-bold border-b pb-2 mb-4">
+            <div key={section.category} className="group">
+              <h3 className="text-2xl font-serif font-bold text-brand-red border-b-2 border-brand-gold/30 pb-3 mb-8 uppercase tracking-widest">
                 {section.category}
               </h3>
 
-              <ul className="space-y-4">
+              <ul className="space-y-8">
                 {section.items.map((item) => (
-                  <li key={item.id ?? item.name}>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <p className="font-semibold flex items-center">
-                          {item.name}
+                  <li key={item.id ?? item.name} className="group/item">
+                    <div className="flex justify-between items-baseline gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <p className="font-serif font-bold text-lg text-brand-green dark:text-parchment group-hover/item:text-brand-red transition-colors">
+                            {item.name}
+                          </p>
 
                           {item.badges?.includes("spicy") && (
                             <img
                               src="/icons/chile.ico"
                               alt="Spicy"
                               title="Spicy – picante al gusto"
-                              className="inline-block ml-2 w-4 h-4 hover:scale-110 transition"
+                              className="w-4 h-4"
                             />
                           )}
-                          {item.badges?.includes("popular") && (
-                            <img
-                              src="/favicon.ico"
-                              alt="Popular"
-                              title="Popular"
-                              className="inline-block ml-2 w-4 h-4 hover:scale-110 transition"
-                            />
-                          )}
-                        </p>
+                        </div>
 
                         {item.description && (
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
+                          <p className="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
                             {item.description}
                           </p>
                         )}
                       </div>
 
-                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                      <div className="text-right font-serif font-bold text-brand-red">
                         {item.prices?.map((p, i) => (
-                          <div key={i}>
-                            {p.size && <span>{p.size} </span>}
+                          <div key={i} className="whitespace-nowrap">
+                            {p.size && <span className="text-[10px] uppercase tracking-tighter text-gray-500 mr-1">{p.size}</span>}
                             ${p.price.toFixed(2)}
                           </div>
                         ))}
@@ -75,19 +71,18 @@ export default function MenuSection({
                   </li>
                 ))}
               </ul>
-
             </div>
           ))}
         </div>
 
         {showButton && (
-          <div className="mt-16 text-center">
-            <a
+          <div className="mt-20 text-center">
+            <Link
               href="/menu"
-              className="inline-block bg-red-700 hover:bg-red-800 text-white px-10 py-3 rounded-lg font-semibold"
+              className="inline-block bg-brand-red hover:bg-brand-red/90 text-white px-12 py-4 rounded font-bold uppercase tracking-widest transition-all shadow-lg"
             >
               View Full Menu
-            </a>
+            </Link>
           </div>
         )}
       </div>
