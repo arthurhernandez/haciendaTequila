@@ -253,12 +253,15 @@ export default function Calendar({ events }: CalendarProps) {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
                   <div className="flex items-center gap-2 text-brand-green dark:text-brand-gold font-bold">
                     <span className="text-xl">📅</span>
-                    {new Date(selectedEvent.date).toLocaleDateString("en-US", {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {(() => {
+                      const [y, m, d] = selectedEvent.date.split("-").map(Number);
+                      return new Date(y, m - 1, d).toLocaleDateString("en-US", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      });
+                    })()}
                   </div>
                   <button 
                     onClick={() => setSelectedEventId(null)}

@@ -6,13 +6,13 @@
   
   --brand-red: #8b0000;
   --brand-gold: #d4af37;
-  --brand-green: #264a4a;
+  --brand-green: #1a3a3a;
   --parchment: #f9f6f0;
-  --charcoal: #3c3c39;
+  --charcoal: #2d2d2a;
 }
 
 .dark {
-  --background: #2a2a28;
+  --background: #1a1a1a;
   --foreground: #f9f6f0;
 }
 
