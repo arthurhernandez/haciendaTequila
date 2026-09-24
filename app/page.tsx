@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-parchment text-charcoal flex flex-col selection:bg-brand-gold/30">
-      <main className="pt-16">
+      <main className="pt-14">
         {/* HERO */}
         <section className="relative h-[70vh] flex items-center justify-center text-white overflow-hidden">
           <Image

@@ -75,7 +75,7 @@ export default function AboutPage() {
           }),
         }}
       />
-      <main className="bg-parchment pt-12">
+      <main className="bg-parchment pt-14">
         <AboutSection />
       </main>
     </>

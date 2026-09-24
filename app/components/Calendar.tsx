@@ -11,7 +11,12 @@ interface CalendarProps {
 }
 
 export default function Calendar({ events }: CalendarProps) {
-  const [currentDate, setCurrentDate] = useState(new Date(2026, 8, 1)); // September 2026
+  const today = useMemo(() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }, []);
+  const [currentDate, setCurrentDate] = useState(today);
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
 
   const selectedEvent = events.find(e => e.id === selectedEventId);
@@ -91,7 +96,10 @@ export default function Calendar({ events }: CalendarProps) {
       <div className="hidden md:grid grid-cols-7 auto-rows-[minmax(150px,auto)]">
         {calendarDays.map((day, idx) => {
           const dayEvents = getEventsForDay(day);
-          const isToday = day === 15 && month === 8 && year === 2026;
+          const isToday = 
+            day === today.getDate() && 
+            month === today.getMonth() && 
+            year === today.getFullYear();
 
           return (
             <div
@@ -148,6 +156,10 @@ export default function Calendar({ events }: CalendarProps) {
       <div className="md:hidden divide-y divide-brand-gold/10">
         {calendarDays
           .filter((d) => d !== null)
+          .filter((day) => {
+            const date = new Date(year, month, day!);
+            return date >= today;
+          })
           .map((day) => {
             const dayEvents = getEventsForDay(day);
             if (dayEvents.length === 0) return null;
@@ -194,9 +206,13 @@ export default function Calendar({ events }: CalendarProps) {
               </div>
             );
           })}
-        {calendarDays.filter((d) => d !== null && getEventsForDay(d).length > 0).length === 0 && (
+        {calendarDays.filter((d) => {
+          if (d === null) return false;
+          const date = new Date(year, month, d);
+          return getEventsForDay(d).length > 0 && date >= today;
+        }).length === 0 && (
           <div className="p-12 text-center italic text-gray-500">
-            No events scheduled for this month.
+            No upcoming events scheduled for this month.
           </div>
         )}
       </div>

@@ -7,11 +7,11 @@ export const photos: Photo[] = [
     alt: "Authentic Mexican Mariscos",
     width: 1200,
     height: 800,
-    category: "Food"
+    category: "atmosphere"
   },
   {
     id: "2",
-    url: "/images/bolsita.jpg",
+    url: "/images/Bolsita.jpg",
     alt: "Bolsita de Mexicanos Bebida",
     width: 1200,
     height: 1600,
@@ -23,7 +23,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "Drinks"
+    category: "food"
   },
   {
     id: "4",
@@ -31,54 +31,199 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "Drinks"
+    category: "food"
   },
   {
     id: "5",
-    url: "https://images.unsplash.com/photo-1582234373447-4959b9ca864c?q=80&w=1200&auto=format&fit=crop",
-    alt: "Mexican Restaurant Interior",
+    url: "/images/IMG_0001 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "food"
+  },
+  {
+    id: "6",
+    url: "/images/IMG_8367 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "7",
+    url: "/images/IMG_8370 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "8",
+    url: "/images/IMG_8427 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "food"
+  },
+  {
+    id: "9",
+    url: "/images/IMG_8452 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "10",
+    url: "/images/IMG_8469 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "11",
+    url: "/images/IMG_8478 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "12",
+    url: "/images/IMG_8481 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "13",
+    url: "/images/IMG_8494 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "14",
+    url: "/images/IMG_8504 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "15",
+    url: "/images/IMG_8510 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "atmosphere"
+  },
+  {
+    id: "16",
+    url: "/images/IMG_8519 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "17",
+    url: "/images/IMG_8530 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "18",
+    url: "/images/IMG_8738 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "food"
+  },
+  {
+    id: "19",
+    url: "/images/IMG_8767 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "20",
+    url: "/images/IMG_8770 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "21",
+    url: "/images/IMG_8868 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "food"
+  },
+  {
+    id: "22",
+    url: "/images/IMG_9385 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "atmosphere"
+  },
+  {
+    id: "23",
+    url: "/images/IMG_9790 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "Drinks"
+  },
+  {
+    id: "24",
+    url: "/images/IMG_9793 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "atmosphere"
+  },
+  {
+    id: "25",
+    url: "/images/IMG_9795 Medium.png",
+    alt: "Fresh Margarita with Salt",
+    width: 1200,
+    height: 800,
+    category: "atmosphere"
+  },
+  {
+    id: "26",
+    url: "/images/fiesta.jpeg",
+    alt: "Vibrant Fiesta Atmosphere",
     width: 1200,
     height: 800,
     category: "Atmosphere"
   },
   {
-    id: "6",
-    url: "https://images.unsplash.com/photo-1562158074-17d5bf6f056d?q=80&w=1200&auto=format&fit=crop",
-    alt: "Tequila Shots and Lime",
-    width: 1200,
-    height: 1600,
-    category: "Drinks"
-  },
-  {
-    id: "7",
-    url: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=1200&auto=format&fit=crop",
-    alt: "Guacamole and Chips",
+    id: "27",
+    url: "/images/pary.jpeg",
+    alt: "Private Event Celebration",
     width: 1200,
     height: 800,
-    category: "Food"
+    category: "Atmosphere"
   },
   {
-    id: "8",
-    url: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop",
-    alt: "Cocktail at the Bar",
-    width: 1200,
-    height: 1600,
-    category: "Drinks"
-  },
-  {
-    id: "9",
-    url: "https://images.unsplash.com/photo-1568106604864-1ac21881e64c?q=80&w=1200&auto=format&fit=crop",
-    alt: "Mexican Grill Special",
+    id: "28",
+    url: "/images/viernes.jpeg",
+    alt: "Friday Night Vibe",
     width: 1200,
     height: 800,
-    category: "Food"
+    category: "Atmosphere"
   },
-  {
-    id: "10",
-    url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-    alt: "Steak and Vegetables",
-    width: 1200,
-    height: 800,
-    category: "Food"
-  }
+
 ];
