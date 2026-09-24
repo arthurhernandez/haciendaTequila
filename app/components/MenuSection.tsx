@@ -43,7 +43,7 @@ export default function MenuSection({
 
           <div className="flex justify-center mt-6">
             <a
-              href="/menu-pdf.pdf"
+              href="/pdfs/Menu.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-brand-red text-brand-red px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-brand-red hover:text-white transition-all shadow-sm"
@@ -59,12 +59,12 @@ export default function MenuSection({
             <div key={section.category} className="group">
               <button
                 onClick={() => toggleCategory(section.category)}
-                className="w-full flex justify-between items-center text-left md:pointer-events-none group/btn"
+                className="w-full flex justify-between items-center text-left md:pointer-events-none group/btn border-b-2 border-brand-gold/30 pb-3 mb-8"
               >
-                <h3 className="text-2xl font-serif font-bold text-brand-red border-b-2 border-brand-gold/30 pb-3 mb-8 uppercase tracking-widest flex-1">
+                <h3 className="text-2xl font-serif font-bold text-brand-red uppercase tracking-widest flex-1">
                   {section.category}
                 </h3>
-                <span className="md:hidden text-brand-red mb-8 border-b-2 border-brand-gold/30 pb-3 px-2">
+                <span className="md:hidden text-brand-red px-2">
                   {openCategories.includes(section.category) ? (
                     <FaChevronUp />
                   ) : (
