@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-parchment pt-14 pb-12">
+    <div className="min-h-screen bg-parchment pt-18 pb-14">
       <main className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10">
           <span className="text-brand-red font-sans font-bold uppercase tracking-widest mb-2 block">Join the Fiesta</span>

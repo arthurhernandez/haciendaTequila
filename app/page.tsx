@@ -131,11 +131,6 @@ export default function Home() {
             Private Events & Celebrations
           </h2>
 
-          <p className="text-xl text-gray-700 dark:text-parchment/70 font-sans leading-relaxed max-w-3xl mx-auto">
-            Birthdays, corporate events, and family gatherings —
-            hosted with bold Mexican flavors, full bar service, and space to celebrate.
-          </p>
-
           <div className="mt-12">
             <Link
               href="/contact"

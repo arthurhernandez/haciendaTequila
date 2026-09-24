@@ -7,11 +7,11 @@ export const photos: Photo[] = [
     alt: "Authentic Mexican Mariscos",
     width: 1200,
     height: 800,
-    category: "atmosphere"
+    category: "Atmosphere"
   },
   {
     id: "2",
-    url: "/images/Bolsita.jpg",
+    url: "/images/Bolsita Medium.jpeg",
     alt: "Bolsita de Mexicanos Bebida",
     width: 1200,
     height: 1600,
@@ -19,11 +19,11 @@ export const photos: Photo[] = [
   },
   {
     id: "3",
-    url: "/images/gEMELA.jpg",
+    url: "/images/gEMELA Medium.jpeg",
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "4",
@@ -31,7 +31,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "5",
@@ -39,7 +39,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "6",
@@ -63,7 +63,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "9",
@@ -119,7 +119,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "atmosphere"
+    category: "Atmosphere"
   },
   {
     id: "16",
@@ -143,7 +143,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "19",
@@ -167,7 +167,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "food"
+    category: "Food"
   },
   {
     id: "22",
@@ -175,7 +175,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "atmosphere"
+    category: "Atmosphere"
   },
   {
     id: "23",
@@ -191,7 +191,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "atmosphere"
+    category: "Atmosphere"
   },
   {
     id: "25",
@@ -199,7 +199,7 @@ export const photos: Photo[] = [
     alt: "Fresh Margarita with Salt",
     width: 1200,
     height: 800,
-    category: "atmosphere"
+    category: "Atmosphere"
   },
   {
     id: "26",
